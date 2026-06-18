@@ -5,7 +5,8 @@ void main(List<String> args) {
   //   return "This is my txt";
   // }
 
-  Future<String> myreciever = Future(() => "This is my text");
+  Future<String> myreciever =
+      Future.delayed(Duration(seconds: 5), () => "This is my text");
   myreciever.then((value) {
     print(value);
   });
