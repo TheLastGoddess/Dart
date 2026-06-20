@@ -1,0 +1,8 @@
+import 'dart:async';
+
+void main(List<String> args) {
+  List<int> data = [1, 4, 5, 3, 67, 32];
+  Stream stream = Stream<int>.fromIterable(data);
+  Stream broadcast = stream.asBroadcastStream();
+  broadcast.listen((value) => print(value));
+}
