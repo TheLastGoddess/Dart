@@ -6,4 +6,6 @@ void main(List<String> args) {
   stream.listen((value) {
     print(value);
   });
+  print("............");
+  stream.first.then((value) => print(value));
 }
