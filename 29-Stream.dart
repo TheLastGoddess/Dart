@@ -13,4 +13,10 @@ void main(List<String> args) {
   SingleStream.onData((value) => print(value));
   SingleStream.onError((err) => print(err));
   SingleStream.onDone(() => print("done"));
+  SingleStream.onData((value) {
+    print(value);
+    if (value == 2) {
+      SingleStream.cancel();
+    }
+  });
 }
